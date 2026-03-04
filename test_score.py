@@ -9,8 +9,11 @@ def test_apply_multiplier(game):
    with pytest.raises(ValueError):
        apply_multiplier(game, -5)
 
-def test_reset_score():
-    pass
+def reset_score(game):
+    game["score"] = 0
+    game["multiplier"] = 1
+    return game
+
 
 def test_is_high_score():
     pass

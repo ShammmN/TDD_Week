@@ -5,8 +5,8 @@ def test_add_points_rejects_negative(game):
     with pytest.raises(ValueError):
         add_points(game, -5)
 
-def test_apply_multiplier():
-    pass
+def test_apply_multiplier(game):
+    pass 
 
 def test_reset_score():
     pass

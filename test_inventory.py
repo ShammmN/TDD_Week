@@ -31,7 +31,10 @@ def test_remove_item_not_in_inventory():
     with pytest.raises(ValueError):
         remove_item(inventory, "beef")
 
-
+def test_remove_item_valid():
+    inventory = {"items": ["apples", "oranges", "chicken"], "capacity": 10, "locked": False}
+    result = remove_item(inventory, "chicken")
+    assert result["items"] == ["apples", "oranges"]
 
 
 

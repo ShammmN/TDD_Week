@@ -5,7 +5,7 @@ def take_damage(player, amount):
     return player
 
 
-def health(player, amount):
+def heal(player, amount):
     if not player["alive"]:
         return player
     player["health"] = min(player["max_health"], player["health"] + amount)

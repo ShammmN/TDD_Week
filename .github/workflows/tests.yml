@@ -7,14 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4 # Step 1: checkout
-      - name: Install Python  # Step 2: set up Python 3.11
+      # Step 2: set up Python 3.11
+      - name: Install Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Install dependencies # Step 3: install pytest, pytest-cov, flake8
+      # Step 3: install pytest, pytest-cov, flake8
+      - name: Install dependencies
         run: pip install pytest pytest-cov flake8
-      - name: run pytest # Step 4: run pytest with coverage enforcement
+      # Step 4: run pytest with coverage enforcement
+      - name: run pytest
         run: pytest --cov=. --cov-fail-under=85
-      - name: run flake8 # Step 5: run flake8
+      # Step 5: run flake8
+      - name: run flake8
         run: flake8 .
-
